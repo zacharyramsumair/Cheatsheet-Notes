@@ -22,3 +22,18 @@ uncomment
     "build": "tsc -p .",
     "dev": "nodemon ./src/app.ts"
   },
+
+
+
+inorder to use things like req.user
+
+make a @typese/express/index.d.ts and add this
+declare namespace Express {
+  export interface Request {
+    user: string;
+  }
+}
+
+
+and then go in ts.config and add this at the end, remember to put comma before the previous last thing
+    "typeRoots": ["@types", "./node_modules/@types"]
