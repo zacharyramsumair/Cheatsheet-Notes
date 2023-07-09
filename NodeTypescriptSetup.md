@@ -37,3 +37,7 @@ declare namespace Express {
 
 and then go in ts.config and add this at the end, remember to put comma before the previous last thing
     "typeRoots": ["@types", "./node_modules/@types"]
+
+
+
+    skipLibCheck shoud be true - means that you skip cheaking types in .d.ts files
